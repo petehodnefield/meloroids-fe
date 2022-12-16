@@ -8,7 +8,10 @@ const HamburgerLinks = ({ isOpen, setIsOpen, navSelected, setNavSelected }) => {
         <li className="hamNav__li">
           <Link
             to="/"
-            onClick={() => setNavSelected("Home")}
+            onClick={() => {
+              setNavSelected("Home");
+              setIsOpen(false);
+            }}
             className=" hamNav__a"
           >
             Home
@@ -17,7 +20,10 @@ const HamburgerLinks = ({ isOpen, setIsOpen, navSelected, setNavSelected }) => {
         <li className="hamNav__li">
           <Link
             to="/train"
-            onClick={() => setNavSelected("Train")}
+            onClick={() => {
+              setNavSelected("Train");
+              setIsOpen(false);
+            }}
             className=" hamNav__a"
           >
             Train
@@ -47,9 +53,13 @@ const HamburgerLinks = ({ isOpen, setIsOpen, navSelected, setNavSelected }) => {
           <a className=" hamNav__a">My Account</a>
         </li> */}
         <li className="hamNav__li">
-          <a href="/login" className=" hamNav__a">
+          <Link
+            to="/login"
+            className=" hamNav__a"
+            onClick={() => setIsOpen(false)}
+          >
             Login (Coming Soon)
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { Icon } from "@iconify/react";
 
 import hsTrainImg from "../../../assets/images/hs-train.png";
+import { Link } from "react-router-dom";
 const HsTrain = () => {
   return (
     <div className="hs-train-container">
@@ -17,9 +18,9 @@ const HsTrain = () => {
             vulputate mi. Enim nullam ipsum donec sed ornare vitae diam ut et.
             Tempus quis interdum quis scelerisque leo condimentum sed nulla.
           </p>
-          <a href="/train">
+          <Link to="/train">
             <button className="btn p-gradient btn-cta">Get Started</button>
-          </a>
+          </Link>
         </div>
         <div className="hs__train-img-wrapper">
           <img className="hs__train-img" src={hsTrainImg} />
