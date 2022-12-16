@@ -8,21 +8,21 @@ const NavLinks = ({ navSelected, setNavSelected }) => {
     <div className="nav-links-wrapper">
       <ul className="nav__ul">
         <li>
-          <a
+          <Link
             onClick={() => setNavSelected("Home")}
             className={`p1 ${navSelected === "Home" ? "selected__nav" : ""}`}
-            href="/"
+            to="/"
           >
             Home
-          </a>
+          </Link>
         </li>
         <li onClick={() => setNavSelected("Train")}>
-          <a
+          <Link
             className={`p1 ${navSelected === "Train" ? "selected__nav" : ""}`}
-            href="/train"
+            to="/train"
           >
             Train
-          </a>
+          </Link>
         </li>
         {/* <li>
           <a

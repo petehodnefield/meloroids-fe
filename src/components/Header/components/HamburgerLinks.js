@@ -1,26 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HamburgerLinks = ({ isOpen, setIsOpen, navSelected, setNavSelected }) => {
   return (
     <div className="hamburger-links-wrapper">
       <ul className="hamNav__list">
         <li className="hamNav__li">
-          <a
-            href="/"
+          <Link
+            to="/"
             onClick={() => setNavSelected("Home")}
             className=" hamNav__a"
           >
             Home
-          </a>
+          </Link>
         </li>
         <li className="hamNav__li">
-          <a
-            href="/train"
+          <Link
+            to="/train"
             onClick={() => setNavSelected("Train")}
             className=" hamNav__a"
           >
             Train
-          </a>
+          </Link>
         </li>
         {/* <li className="hamNav__li">
           <a
