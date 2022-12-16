@@ -22,8 +22,6 @@ const ReferenceSongs = ({ artist_name, progression, selectedSong }) => {
     }
 
     const displayReferenceSongs = (song) => {
-      console.log(song);
-
       return song.map((song) => {
         return (
           <div className={`ref-song-container ${artistNameConcat}`}>

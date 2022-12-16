@@ -12,6 +12,7 @@ import ReferenceSongsFrequency from "../../../components/ReferenceSongs/Referenc
 import KeyTempoChords from "../../../components/KeyTempoChords";
 import ReRollFreestyle from "../../../components/KeyTempoChords/ReRoll/ReRollFreestyle";
 import { chordIcon, keyIcon, tempoIcon } from "../../../data/icons";
+import ReRollInterval from "../../../components/KeyTempoChords/ReRoll/ReRollInterval";
 
 function TrainInfo({ artist_name }) {
   const {
@@ -58,7 +59,7 @@ function TrainInfo({ artist_name }) {
               selectedTempo={selectedTempo}
               selectedProgression={selectedProgression}
             ></KeyTempoChords>
-            <ReRollFreestyle></ReRollFreestyle>
+            <ReRollInterval></ReRollInterval>
           </div>
         </div>
         <ReferenceSongsFrequency

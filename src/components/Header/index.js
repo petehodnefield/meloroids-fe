@@ -9,7 +9,6 @@ import HamburgerLinks from "./components/HamburgerLinks";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [navSelected, setNavSelected] = useState("");
-  console.log(navSelected);
   return (
     <div className="header">
       {" "}

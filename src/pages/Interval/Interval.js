@@ -3,7 +3,7 @@ import { useParams, useLocation } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { ARTISTS, SINGLE_ARTIST, SINGLE_SONG } from "../../utils/queries";
 
-import TrainInfo from "../Freestyle/components/TrainInfo";
+import TrainInfo from "./components/TrainInfo";
 import Timer from "../../components/Timer";
 
 function Interval({ photo, minutes }) {
@@ -11,7 +11,6 @@ function Interval({ photo, minutes }) {
   const { artists: artist, mode } = useParams();
 
   const location = useLocation();
-  console.log("location", location);
   // use query to pull artist
   const { loading, error, data } = useQuery(SINGLE_ARTIST, {
     variables: { name: artist },

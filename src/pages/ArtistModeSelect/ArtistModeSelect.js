@@ -24,7 +24,6 @@ function ArtistModeSelect() {
   const [selectedModePhoto, setSelectedModePhoto] = useState("");
 
   const [intervalLength, setIntervalLength] = useState("5");
-  console.log("interval", intervalLength);
 
   useEffect(() => {
     artists.forEach((artist) => {

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Login } from "../../../pages/Login";
 
 const NavLinks = ({ navSelected, setNavSelected }) => {
-  console.log(navSelected);
   return (
     <div className="nav-links-wrapper">
       <ul className="nav__ul">

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import triangleIcon from "../../../assets/icons/triangle-icon.svg";
 const SelectArtist = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
 
   return (
     <>
