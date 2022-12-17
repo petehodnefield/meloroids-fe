@@ -36,7 +36,7 @@ const httpLink = createHttpLink({ uri: "/graphql" });
 // });
 const client = new ApolloClient({
   // link: httpLink,
-  uri: "http://meloroids-api.onrender.com",
+  uri: "http://localhost:3001/graphql",
   cache: new InMemoryCache(),
 });
 document.title = "Meloroids";
