@@ -2,12 +2,16 @@ import React, { useEffect, useState } from "react";
 import triangleIcon from "../../../assets/icons/triangle-icon.svg";
 const SelectArtist = (props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isThereText, setIsThereText] = useState(false);
 
   return (
     <>
-      <div className="select-wrapper">
+      <div className="select-wrapper ">
         <h4 className="select__textPrompt uppercase">Select an artist</h4>
-        <div className="select__prompt" onClick={() => setIsOpen(!isOpen)}>
+        <div
+          className={`select__prompt ${isThereText ? "yesText" : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <img className="select__triangle" src={triangleIcon} />
           <p className="p1 select__artistText">{props.selectedArtists}</p>
         </div>
@@ -16,10 +20,11 @@ const SelectArtist = (props) => {
             {" "}
             {props.artists.map((artist) => (
               <div
-                className="select__artist p3"
+                className={`select__artist p3 `}
                 onClick={() => {
                   props.setSelectedArtists(artist.name);
                   setIsOpen(!isOpen);
+                  setIsThereText(true);
                 }}
                 key={artist.name}
               >

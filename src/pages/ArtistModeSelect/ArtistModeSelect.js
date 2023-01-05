@@ -74,14 +74,14 @@ function ArtistModeSelect() {
         )}
 
         <button
-          className={` btn-primary btn-link ${
+          className={` btn-primary btn-link btn ${
             !selectedArtists || !selectedMode
               ? "btn-cloudy"
               : "btn btn-nonCloudy"
           }`}
         >
           <Link
-            className="primary uppercase p2"
+            className="primary uppercase p2 btn"
             to={`/train/artists/${selectedArtists}/${selectedMode}`}
             state={{ from: intervalLength }}
           >

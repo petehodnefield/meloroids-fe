@@ -13,7 +13,7 @@ const SelectMode = ({
       <div className="select-btn-wrapper">
         {selectedMode === "Interval" ? (
           <select
-            className={`btn p2 btn-primary pill interval__select  ${
+            className={`btn p2 btn-primary  interval__select  ${
               selectedMode === "Interval" ? "btn-selected" : ""
             }`}
             onChange={(e) => setIntervalLength(e.target.value)}
@@ -25,7 +25,7 @@ const SelectMode = ({
         ) : (
           <button
             defaultValue={{ label: "Interval", value: 0 }}
-            className={`btn p2 btn-primary pill  ${
+            className={`btn p2 btn-primary   ${
               selectedMode === "Interval" ? "btn-selected" : ""
             }`}
             onClick={() => setSelectedMode("Interval")}
@@ -34,7 +34,7 @@ const SelectMode = ({
           </button>
         )}
         <button
-          className={`btn p2 btn-primary pill  ${
+          className={`btn p2 btn-primary   ${
             selectedMode === "Freestyle" ? "btn-selected" : ""
           }`}
           onClick={() => setSelectedMode("Freestyle")}
