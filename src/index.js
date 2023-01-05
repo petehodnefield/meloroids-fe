@@ -7,38 +7,42 @@ import {
   ApolloProvider,
   ApolloClient,
   InMemoryCache,
-  createHttpLink,
-  setContext,
+  gql,
 } from "@apollo/client";
 
 // Component/Page imports
 import Home from "./pages/Home";
-import Footer from "./components/Footer";
 import Interval from "./pages/Interval/Interval";
 import Freestyle from "./pages/Freestyle/Freestyle";
 import Header from "./components/Header";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Timer from "./components/Timer";
 import ComingSoon from "./pages/ComingSoon";
 import HomeScreen from "./pages/HomeScreen";
 
-const httpLink = createHttpLink({ uri: "/graphql" });
-
-// const authLink = setContext((_, { headers }) => {
-//   const token = localStorage.getItem("id_token");
-//   return {
-//     headers: {
-//       ...headers,
-//       authorization: token ? `Bearer ${token}` : "",
-//     },
-//   };
-// });
 const client = new ApolloClient({
-  // link: httpLink,
-  uri: "https://meloroids-api.onrender.com",
+  uri: "https://meloroids-api.onrender.com/graphql",
   cache: new InMemoryCache(),
 });
+client
+  .query({
+    query: gql`
+      query Songs {
+        songs {
+          _id
+          artist_name
+          key
+          song_name
+          progression
+        }
+      }
+    `,
+  })
+  .then((result) => {
+    console.log(result);
+    console.log(console.error());
+  })
+  .catch((err) => console.log("hi", err));
 document.title = "Meloroids";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
