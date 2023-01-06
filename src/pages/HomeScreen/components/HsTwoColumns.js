@@ -7,7 +7,7 @@ const HsTwoColumns = () => {
         <h3 className="hs__column-header">
           Learn the music theory <br></br> behind your favorite songs
         </h3>
-        <p className="p3 hs__column-text">
+        <p className=" hs__column-text">
           Lorem ipsum dolor sit amet consectetur. Sit ut dictum id auctor.
           Tempus ut fringilla id volutpat amet venenatis tempor est eget.
           Imperdiet non risus velit morbi neque quis ullamcorper id interdum.
@@ -18,7 +18,7 @@ const HsTwoColumns = () => {
           <span className="bold">Real</span> Artists,{" "}
           <span className="bold">Real</span> Data,<br></br> only on Meloroids{" "}
         </h3>
-        <p className="p3 hs__column-text">
+        <p className=" hs__column-text">
           Lorem ipsum dolor sit amet consectetur. Sit ut dictum id auctor.
           Tempus ut fringilla id volutpat amet venenatis tempor est eget.
           Imperdiet non risus velit morbi neque quis ullamcorper id interdum.

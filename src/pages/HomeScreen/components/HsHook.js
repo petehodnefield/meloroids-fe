@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const HsHook = () => {
   return (
@@ -9,13 +8,13 @@ const HsHook = () => {
       </h2>
       <h4 className="hs__sub-header">Gain an unfair advantage</h4>
       <div className="hs-text-wrapper">
-        <p className="p3 hs__text">
+        <p className=" hs__text">
           Meloroids has the best data on what artists use in their songs.
           Meloroids will help you start landing placements.
         </p>
-        <Link to="/train">
+        <a href="/#train">
           <button className=" btn btn-tertiary btn-cta">Learn more</button>
-        </Link>
+        </a>
       </div>
     </div>
   );
