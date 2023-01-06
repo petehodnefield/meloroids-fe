@@ -4,13 +4,16 @@ import HsShapes from "./components/HsShapes";
 import HsTrain from "./components/HsTrain";
 import HsTwoColumns from "./components/HsTwoColumns";
 import "./HomeScreen.css";
-const HomeScreen = () => {
+const HomeScreen = ({ navSelected, setNavSelected }) => {
   return (
     <div className="hs-container">
       <HsShapes></HsShapes>
       <HsHook></HsHook>
       <HsTwoColumns></HsTwoColumns>
-      <HsTrain></HsTrain>
+      <HsTrain
+        navSelected={navSelected}
+        setNavSelected={setNavSelected}
+      ></HsTrain>
     </div>
   );
 };

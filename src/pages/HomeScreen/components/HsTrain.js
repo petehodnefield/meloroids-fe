@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 
 import hsTrainImg from "../../../assets/images/hs-train.png";
 import { Link } from "react-router-dom";
-const HsTrain = () => {
+const HsTrain = ({ navSelected, setNavSelected }) => {
   return (
     <div id="train" className="hs-train-container">
       <div className="hs-train-text-img-wrapper">
@@ -19,7 +19,12 @@ const HsTrain = () => {
             Tempus quis interdum quis scelerisque leo condimentum sed nulla.
           </p>
           <Link to="/train">
-            <button className="btn p-gradient btn-cta">Get Started</button>
+            <button
+              onClick={() => setNavSelected("Train")}
+              className="btn p-gradient btn-cta"
+            >
+              Get Started
+            </button>
           </Link>
         </div>
         <div className="hs__train-img-wrapper">

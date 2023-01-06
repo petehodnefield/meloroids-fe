@@ -6,9 +6,8 @@ import "./Header.css";
 import NavLinks from "./components/NavLinks";
 import Hamburger from "./components/Hamburger";
 import HamburgerLinks from "./components/HamburgerLinks";
-const Header = () => {
+const Header = ({ navSelected, setNavSelected }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [navSelected, setNavSelected] = useState("");
   return (
     <div className="header">
       {" "}
@@ -27,6 +26,7 @@ const Header = () => {
         <div className="logo-wrapper">
           <Link className="home-link" to={`/`}>
             <img
+              onClick={() => setNavSelected("Home")}
               className="logo-small"
               src={require("../../assets/logo/logo-small.png")}
             />

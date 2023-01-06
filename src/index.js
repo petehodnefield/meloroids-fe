@@ -1,75 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "../src/assets/styles.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import {
-  ApolloProvider,
-  ApolloClient,
-  InMemoryCache,
-  gql,
-} from "@apollo/client";
+import App from "./App";
 
-// Component/Page imports
-import Home from "./pages/Home";
-import Interval from "./pages/Interval/Interval";
-import Freestyle from "./pages/Freestyle/Freestyle";
-import Header from "./components/Header";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
-import ComingSoon from "./pages/ComingSoon";
-import HomeScreen from "./pages/HomeScreen";
-
-const client = new ApolloClient({
-  uri: "https://meloroids-api.onrender.com/graphql",
-  cache: new InMemoryCache(),
-});
-client
-  .query({
-    query: gql`
-      query Songs {
-        songs {
-          _id
-          artist_name
-          key
-          song_name
-          progression
-        }
-      }
-    `,
-  })
-  .then((result) => {
-    console.log(result);
-    console.log(console.error());
-  })
-  .catch((err) => console.log("hi", err));
 document.title = "Meloroids";
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <BrowserRouter>
-        <Header></Header>
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/train" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/learn" element={<ComingSoon />} />
-          <Route path="/stats" element={<ComingSoon />} />
-
-          <Route
-            path="/train/artists/:artists/Freestyle"
-            element={<Freestyle />}
-          />
-          <Route
-            path="/train/artists/:artists/Interval"
-            element={<Interval></Interval>}
-          />
-        </Routes>
-        {/* <Footer></Footer> */}
-      </BrowserRouter>
-    </ApolloProvider>
+    <App />
   </React.StrictMode>
 );
 
