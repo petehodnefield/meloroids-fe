@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ReRollFreestyle = () => {
   const { artists: artist } = useParams();
   return (
-    <Link to={`/train/artists/${artist}/Freestyle`}>
+    <Link className="reroll-wrapper" to={`/train/artists/${artist}/Freestyle`}>
       <button className="btn-reroll">
         <img className="dice-icon" src={diceIcon} />
       </button>

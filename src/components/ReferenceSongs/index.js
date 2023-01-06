@@ -26,7 +26,7 @@ const ReferenceSongs = ({ artist_name, progression, selectedSong }) => {
         return (
           <div className={`ref-song-container ${artistNameConcat}`}>
             <div className="ref__textWrapper">
-              <p className="ref__text ">"{song.song_name}"</p>
+              <p className="ref__text bold">{song.song_name}</p>
               {/* <p className="ref__text ref__album">{song.album_name}</p> */}
             </div>
             <AlbumArtwork
@@ -50,10 +50,10 @@ const ReferenceSongs = ({ artist_name, progression, selectedSong }) => {
         ) : (
           <div className="ref-container">
             <div className="ref-header-wrapper">
-              <h3 className="ref__header">Other songs that use</h3>{" "}
-              <span className="bold pill pd1 btn-primary primary">
-                {progression}
-              </span>
+              <p className="ref__header">
+                Other songs that use{" "}
+                <span className="bold  ">{progression}</span>
+              </p>{" "}
             </div>
             <div className="ref-song-grid">
               {displayReferenceSongs(songArray)}

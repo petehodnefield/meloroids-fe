@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { ARTISTS, SINGLE_ARTIST, SINGLE_SONG } from "../../utils/queries";
 import TrainInfo from "./components/TrainInfo";
-
+import "../../assets/Train.css";
 function FreeStyle({ photo }) {
   // grab artist&&mode from parameters
   const { artists: artist, mode } = useParams();

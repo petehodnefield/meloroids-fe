@@ -29,11 +29,9 @@ const ReferenceSongsFrequency = ({ selectedProgression, artist_name }) => {
     return (
       <div className="frequency-bar-container">
         <h5 className="frequency__text">
-          <span className="btn-selected bold  pill pd1">
-            {selectedProgression}
-          </span>{" "}
+          <span className="span-selected  bold  ">{selectedProgression}</span>{" "}
           is used in <span className="bold">{frequencyRound}% </span> of{" "}
-          {artist_name}'s songs
+          {artist_name}'s songs!
         </h5>
         <div className="box-shadow frequency__barfr pill">
           <div

@@ -1,0 +1,339 @@
+*:root {
+  --primary: #fefefe;
+  --secondary: #232224;
+  --tertiary: #ca69f9;
+  --accent1: #423d47;
+  --accent2: #efecf0;
+  --black: #000000;
+  --line-p: #aeaaaf;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --margin-small: 1rem;
+  --margin-medium: 4rem;
+  --margin-large: 30rem;
+}
+html {
+  box-sizing: border-box;
+}
+/* / * train styles begin */
+.timer-container {
+  position: fixed;
+  bottom: 0vh;
+  z-index: 1000;
+  background: var(--tertiary);
+  color: var(--primary);
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.timer {
+  color: var(--primary);
+}
+
+.loading-container {
+  height: 100vh;
+  background: var(--accent2);
+  text-align: center;
+}
+
+.train-container {
+  width: 100%;
+  padding: 0 1rem;
+}
+.train-contents {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--margin-small);
+}
+.train-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+.train-img-container {
+  box-sizing: border-box;
+
+  height: 10rem;
+  border-radius: 8px;
+
+  width: 100%;
+}
+
+.train__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.song-data-wrapper {
+  background: var(--accent2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  position: relative;
+  color: var(--black);
+  height: 100%;
+  margin: 2rem 0;
+}
+
+.song__header {
+  padding: 1.5rem 0 1rem;
+}
+.song-data-card {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+.icon-data-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 0.5rem;
+}
+.reroll-wrapper {
+  height: 2rem;
+  width: 100%;
+  position: relative;
+}
+.song-data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.data-icon {
+  min-height: 3rem;
+  margin-bottom: 0.25rem;
+  max-width: 3rem;
+}
+.frequency-bar-container {
+  margin-bottom: 4rem;
+}
+
+.frequency__barfr {
+  margin: 1rem 0 0;
+  width: 100%;
+  background: var(--black);
+  height: 1rem;
+}
+.frequency__barbg {
+  background: var(--tertiary);
+  height: 1rem;
+}
+
+/* reference song style begin */
+.ref-container,
+.ref-container-blank {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.ref-container {
+  background: var(--accent2);
+  padding-bottom: 2rem;
+}
+.ref-container-noRef {
+  padding-bottom: 2rem;
+}
+.ref-song-grid {
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  padding: 0 var(--margin-small);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+  overflow: scroll;
+}
+.ref__noRef {
+  margin: 0 1rem;
+}
+.ref-song-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background: var(--black);
+  width: 14.5rem;
+  height: 20rem;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+}
+.ref__albumArt {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+}
+.ref-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 0rem;
+  margin-bottom: 1rem;
+}
+.ref__header {
+  line-height: 150%;
+  font-size: 1.25rem;
+}
+.ref__textWrapper {
+  z-index: 5;
+  max-height: 5rem;
+  min-height: 5rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ref__text {
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  .train-img-container {
+    height: 14rem;
+    border-radius: 10px;
+    width: 80%;
+  }
+  .train-contents {
+    padding: 0 var(--margin-medium);
+  }
+
+  .song-data-wrapper {
+    margin: 3rem 0;
+    width: 60%;
+  }
+  .frequency__text {
+    font-size: 1rem;
+  }
+  .frequency__barfr {
+    height: 1.25rem;
+  }
+  .frequency__barbg {
+    height: 1.25rem;
+  }
+  .ref__header {
+    font-size: 1.5rem;
+  }
+  .ref-song-grid {
+    grid-template-columns: repeat(3, 16rem);
+    grid-template-rows: repeat(2, 20rem);
+    justify-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  .ref-song-container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1080px) {
+  /* train styles begin */
+  .train-wrapper {
+    padding-top: 4rem;
+  }
+  .train-contents {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 6rem 4rem;
+    margin: 0 6rem;
+
+    width: 80%;
+  }
+  .train-img-container {
+    order: 2;
+    height: 29rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+  .train__img {
+    border-radius: 50%;
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+    width: 29rem;
+  }
+  .song__header {
+    padding-bottom: 2.5rem;
+  }
+  .song-data-wrapper {
+    flex-basis: 30%;
+    padding: 2rem 0;
+    margin-left: 4rem;
+  }
+  .song-data-container {
+    flex-direction: row;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+  }
+  .data-icon {
+    padding: 0 0.5rem;
+  }
+  .icon-data-wrapper {
+    align-items: flex-start;
+  }
+  .frequency__text {
+    font-size: 1.5rem;
+  }
+  .frequency__barfr {
+    height: 1.5rem;
+  }
+  .frequency__barbg {
+    height: 1.5rem;
+  }
+  .ref-header-wrapper {
+    flex-direction: row;
+  }
+  .ref__header {
+    margin-right: 0.5rem;
+  }
+  .ref-song-grid {
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 7rem;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .train-img-container {
+    margin-right: 8rem;
+  }
+
+  .song-data-wrapper {
+    margin-left: 8rem;
+  }
+  .train-img-container {
+    margin-right: 4rem;
+  }
+  .song-data-wrapper {
+    margin-left: 4rem;
+  }
+  .ref-song-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
