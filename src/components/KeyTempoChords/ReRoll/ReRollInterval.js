@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ReRollInterval = () => {
   const { artists: artist } = useParams();
   return (
-    <Link to={`/train/artists/${artist}/Interval`}>
+    <Link className="reroll-wrapper" to={`/train/artists/${artist}/Interval`}>
       <button className="btn-reroll">
         <img className="dice-icon" src={diceIcon} />
       </button>

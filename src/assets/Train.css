@@ -93,12 +93,11 @@ html {
 }
 
 .song__header {
-  padding: 1.5rem 0 1rem;
+  padding: 1.5rem 1rem 1rem;
 }
 .song-data-card {
   display: flex;
   flex-direction: column;
-  padding-bottom: 1rem;
 }
 .icon-data-wrapper {
   display: flex;
@@ -112,6 +111,7 @@ html {
   height: 2rem;
   width: 100%;
   position: relative;
+  margin-bottom: 1rem;
 }
 .song-data-container {
   display: flex;
@@ -259,31 +259,30 @@ html {
   .train-contents {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 6rem 4rem;
-    margin: 0 6rem;
-
-    width: 80%;
+    padding: 0 10rem;
+    gap: 4rem;
+    width: 100%;
   }
   .train-img-container {
     order: 2;
-    height: 29rem;
+    height: 26rem;
     border-radius: 50%;
-    margin-right: 2rem;
+    flex-basis: 20%;
   }
   .train__img {
     border-radius: 50%;
     object-fit: cover;
     min-height: 100%;
     min-width: 100%;
-    width: 29rem;
+    width: 26rem;
   }
   .song__header {
     padding-bottom: 2.5rem;
   }
   .song-data-wrapper {
-    flex-basis: 30%;
-    padding: 2rem 0;
-    margin-left: 4rem;
+    flex-basis: 60%;
+    padding: 2rem 0 0;
+    margin-left: 0;
   }
   .song-data-container {
     flex-direction: row;
@@ -297,7 +296,7 @@ html {
     align-items: flex-start;
   }
   .frequency__text {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .frequency__barfr {
     height: 1.5rem;
@@ -320,20 +319,30 @@ html {
   }
 }
 @media screen and (min-width: 1440px) {
+  .train-contents {
+    padding: 0;
+    width: 70rem;
+  }
   .train-img-container {
-    margin-right: 8rem;
+    /* flex-basis: 50%; */
   }
 
   .song-data-wrapper {
-    margin-left: 8rem;
+    flex-basis: 50%;
   }
   .train-img-container {
-    margin-right: 4rem;
+    height: 30rem;
+  }
+  .train__img {
+    width: 30rem;
   }
   .song-data-wrapper {
-    margin-left: 4rem;
   }
   .ref-song-grid {
+    width: 70rem;
+    overflow: scroll;
+
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
   }
 }

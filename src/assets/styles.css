@@ -166,11 +166,12 @@ h5 {
   border: none;
   outline: none;
   height: 2rem;
+  width: 2rem;
   padding: 0;
   cursor: pointer;
   position: absolute;
   right: 1rem;
-  bottom: 1rem;
+  bottom: 0;
 }
 
 .btn-cta {
@@ -308,25 +309,5 @@ h5 {
   /* Login/signup style */
   .login-form-wrapper {
     margin: 10rem 30rem;
-  }
-}
-
-@media (min-width: 1800px) {
-  .hs-train-container {
-    padding: 3rem 22rem 12rem;
-  }
-  /* Login/signup style */
-  .login-form-wrapper {
-    margin: 10rem 50rem;
-  }
-  .train-img-container {
-    margin-right: 12rem;
-    height: 35rem;
-  }
-  .train__img {
-    width: 35rem;
-  }
-  .ref-song-grid {
-    grid-template-columns: repeat(6, 1fr);
   }
 }
