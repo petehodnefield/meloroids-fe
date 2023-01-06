@@ -197,7 +197,7 @@
 @media screen and (min-width: 1080px) {
   .artist-mode-container {
     width: 24rem;
-    margin: 8rem auto;
+    margin: 2rem auto 8rem;
   }
   .homepage-logo-wrapper {
     display: flex;
