@@ -37,11 +37,7 @@
 .home-link {
   width: 4em;
 }
-.homepage-logo-wrapper {
-  width: 100%;
-  text-align: center;
-  display: none;
-}
+
 .homepage-logo {
   max-height: 5rem;
 }

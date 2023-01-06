@@ -6,7 +6,7 @@ import SelectMode from "./components/SelectMode";
 import ChosenArtistMode from "./components/ChosenArtistMode";
 import { artistsPhotos } from "../../data/artistsPhotos";
 import { modesList } from "../../data/modesList";
-
+import "./ArtistModeSelect.css";
 import logoFull from "../../assets/logo/meloroids.png";
 
 function ArtistModeSelect() {

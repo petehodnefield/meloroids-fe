@@ -118,98 +118,12 @@ h5 {
   text-transform: uppercase;
 }
 
-/* Train select style begin */
-.artist-mode-container {
-  margin-top: 5.5rem;
-}
-
-.artist-mode-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 1rem;
-}
-.select-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  position: relative;
-  margin-bottom: 1rem;
-}
-.choice-wrapper {
-  overflow: hidden;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--accent2);
-  top: 3.2rem;
-  width: 62%;
-  max-height: 10rem;
-  padding: 0 0.5rem;
-  z-index: 5;
-  animation-name: choice;
-  animation-duration: 400ms;
-  animation-timing-function: ease-in-out;
-}
-@keyframes choice {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 10rem;
-  }
-}
-
-.select__prompt {
-  height: 3rem;
-  background: var(--accent1);
-  width: 67%;
-  text-align: center;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  border-radius: 5px;
-  position: relative;
-}
-.select__prompt:hover {
-  opacity: 0.9;
-  transition: 160ms ease-in;
-}
-.select__triangle {
-  filter: brightness(0) invert(1);
-  transform: rotate(60deg);
-  margin-right: 0.5rem;
-}
-.select__artist {
-  height: 1.5rem;
-  background: var(--accent1);
-  color: var(--primary);
-  width: 100%;
-  border-radius: 4px;
-  padding: 0.25rem 0.5rem;
-  border: 0.25px solid var(--primary);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-.yesText {
-  background-color: var(--tertiary);
-}
-.select__artistText {
-  color: var(--primary);
-  position: absolute;
+.dice-icon {
+  height: 100%;
   width: 100%;
 }
-.select__artist:hover {
-  background: var(--accent2);
-  color: var(--secondary);
-  transition: 125ms ease-in;
+.pill {
+  border-radius: 100vmax;
 }
 .btn {
   outline: none;
@@ -220,16 +134,6 @@ h5 {
   width: 7.125rem;
   font-weight: 600;
   font-size: 0.875rem;
-}
-.btn-cloudy {
-  opacity: 0.5;
-  cursor: default;
-  pointer-events: none;
-}
-.btn-nonCloudy {
-  opacity: 1;
-  transition: 0.75s ease;
-  width: 20rem;
 }
 .btn:hover {
   opacity: 0.9;
@@ -245,24 +149,6 @@ h5 {
   color: var(--primary);
   border: none;
   border-radius: 4px;
-}
-.pill {
-  border-radius: 100vmax;
-}
-.select-btn-wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-.btn-selected {
-  background: var(--tertiary);
-  transition: 250ms ease-in;
-  color: var(--primary);
-}
-.btn-link {
-  color: var(--primary);
 }
 .btn-outline {
   color: var(--black);
@@ -290,68 +176,43 @@ h5 {
 .btn-cta {
   border-radius: 4px;
 }
+.btn-selected {
+  background: var(--tertiary);
+  transition: 250ms ease-in;
+  color: var(--primary);
+}
+.btn-link {
+  color: var(--primary);
+}
 .btn-hamburger {
   width: 80%;
   padding: inherit 1rem;
   background-color: var(--accent2);
   color: var(--black);
 }
-.dice-icon {
-  height: 100%;
+.btn-cloudy {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.btn-nonCloudy {
+  opacity: 1;
+  background-color: var(--tertiary);
+  transition: 0.75s ease;
   width: 100%;
+  animation: btn-ready 2s ease infinite;
 }
-
-.select__textPrompt {
-  color: var(--secondary);
-  margin-bottom: 0.125rem;
+@keyframes btn-ready {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.select__text {
-  margin-bottom: 0.125rem;
-}
-.selected__artistPhoto {
-  height: 100%;
-  min-width: 100%;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-.selected__imgWrapper {
-  height: 8rem;
-  width: 8rem;
-  overflow: hidden;
-}
-.selected-data-wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-.selected-mode-wrapper {
-  background: var(--accent1);
-  border-radius: 5px;
-  position: relative;
-}
-
-.interval-length-wrapper {
-  position: absolute;
-  width: 100px;
-  display: flex;
-  justify-content: center;
-  left: 50%;
-  margin-left: -50px;
-  bottom: 50%;
-  margin-bottom: -50%;
-}
-.interval__select {
-  text-align: center;
-}
-.selected__mode {
-  filter: brightness(0) invert(1);
-}
-
 /* login form style begin */
 .login-form-wrapper {
   border: 1px solid var(--black);
@@ -612,24 +473,13 @@ h5 {
 .logo-footer {
   max-height: 4rem;
 }
-@media (min-width: 600px) {
-  .selected__imgWrapper {
-    width: 10rem;
-    height: 10rem;
-  }
-}
+
 @media (min-width: 768px) {
   /* Login/signup style */
   .login-form-wrapper {
     margin: 5.5rem 8rem;
   }
 
-  /* Select train style */
-  .selected__imgWrapper {
-    height: 12rem;
-    width: 12rem;
-    overflow: hidden;
-  }
   .train-img-container {
     height: 8rem;
     border-radius: 10px;
@@ -659,42 +509,9 @@ h5 {
 }
 
 @media (min-width: 1080px) {
-  .header {
-    display: flex;
-  }
-  .nav-links-wrapper {
-    display: flex;
-  }
-  .hamburger-wrapper {
-    display: none;
-  }
-  .hamburger-links-wrapper {
-    display: none;
-  }
-  .header {
-    justify-content: space-between;
-    padding: 0 4rem;
-  }
-
-  .homepage-logo-wrapper {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2rem;
-  }
-
   /* Login/signup style */
   .login-form-wrapper {
     margin: 5.5rem 12rem;
-  }
-  .select__textPrompt {
-    font-size: 0.875rem;
-  }
-  .select__prompt {
-    width: 20%;
-  }
-  .choice-wrapper {
-    width: 18%;
-    top: 3.3rem;
   }
 
   /* train styles begin */
@@ -767,10 +584,6 @@ h5 {
 }
 
 @media (min-width: 1440px) {
-  .header {
-    padding: 0 5rem;
-  }
-
   /* Login/signup style */
   .login-form-wrapper {
     margin: 10rem 30rem;
@@ -794,24 +607,6 @@ h5 {
 }
 
 @media (min-width: 1800px) {
-  /* Shape style */
-  .hs-shape-wrapper {
-    height: 28.5rem;
-    width: 65rem;
-  }
-
-  .hs-shape-img-wrapper {
-    top: 3.5rem;
-    right: 23rem;
-    height: 22rem;
-    width: 22rem;
-  }
-  .hs-hook-wrapper,
-  .hs-columns-wrapper {
-    margin-left: 22rem;
-    margin-right: 22rem;
-  }
-
   .hs-train-container {
     padding: 3rem 22rem 12rem;
   }

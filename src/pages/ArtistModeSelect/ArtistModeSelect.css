@@ -1,0 +1,223 @@
+*:root {
+  --primary: #fefefe;
+  --secondary: #232224;
+  --tertiary: #ca69f9;
+  --accent1: #423d47;
+  --accent2: #efecf0;
+  --black: #000000;
+  --line-p: #aeaaaf;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+/* Train select style begin */
+.artist-mode-container {
+  margin-top: 5.5rem;
+  width: 100%;
+}
+
+.artist-mode-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.choice-wrapper {
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--accent2);
+  top: 4.5rem;
+  width: 100%;
+  max-height: 20rem;
+  z-index: 5;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  animation-name: choice;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+}
+@keyframes choice {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 15rem;
+  }
+}
+
+.select__prompt {
+  height: 3rem;
+  background: var(--accent1);
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+}
+.select__prompt:hover {
+  opacity: 0.9;
+  transition: 160ms ease-in;
+}
+.select__triangle {
+  filter: brightness(0) invert(1);
+  transform: rotate(60deg);
+  margin-right: 0.5rem;
+}
+.select__artist {
+  height: 3rem;
+  background: var(--accent1);
+  color: var(--primary);
+
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.select__artist-text {
+  color: var(--primary);
+
+  border-radius: 4px;
+  padding-left: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.yesText {
+  background-color: var(--tertiary);
+}
+.select__artistText {
+  color: var(--primary);
+  position: absolute;
+  width: 100%;
+  font-weight: 600;
+}
+
+.select__artist:hover,
+.select__artist:hover .select__artist-text {
+  background: var(--accent2);
+  color: var(--accent1);
+  transition: 100ms ease-in;
+}
+
+.select__textPrompt {
+  color: var(--secondary);
+  margin-bottom: 0.125rem;
+}
+.select__text {
+  margin-bottom: 0.125rem;
+}
+.select-btn-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.selected__artistPhoto {
+  height: 100%;
+  min-width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.selected__imgWrapper {
+  height: 10rem;
+  width: 8rem;
+  flex-basis: 50%;
+
+  overflow: hidden;
+}
+.selected-data-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.selected-mode-wrapper {
+  background: var(--accent1);
+  border-radius: 5px;
+  position: relative;
+}
+
+.interval-length-wrapper {
+  position: absolute;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 50%;
+  margin-bottom: -50%;
+}
+.interval__select {
+  text-align: center;
+}
+.selected__mode {
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+}
+.homepage-logo-wrapper {
+  display: none;
+}
+@media (min-width: 600px) {
+  .selected__imgWrapper {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* Select train style */
+  .selected__imgWrapper {
+    height: 12rem;
+    width: 12rem;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .artist-mode-container {
+    width: 24rem;
+    margin: 8rem auto;
+  }
+  .homepage-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+
+  .select__textPrompt {
+    font-size: 0.875rem;
+  }
+
+  .choice-wrapper {
+    top: 4rem;
+  }
+  .selected__imgWrapper {
+    height: 10rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .artist-mode-container {
+    width: 30rem;
+  }
+}

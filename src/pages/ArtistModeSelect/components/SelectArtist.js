@@ -20,7 +20,7 @@ const SelectArtist = (props) => {
             {" "}
             {props.artists.map((artist) => (
               <div
-                className={`select__artist p3 `}
+                className={`select__artist `}
                 onClick={() => {
                   props.setSelectedArtists(artist.name);
                   setIsOpen(!isOpen);
@@ -28,7 +28,7 @@ const SelectArtist = (props) => {
                 }}
                 key={artist.name}
               >
-                {artist.name}
+                <p className={`select__artist-text `}>{artist.name}</p>
               </div>
             ))}
           </div>

@@ -11,9 +11,19 @@ const SelectMode = ({
     <div className="select-wrapper">
       <h4 className="select__textPrompt uppercase">Select a mode</h4>
       <div className="select-btn-wrapper">
-        {selectedMode === "Interval" ? (
+        {" "}
+        <button
+          defaultValue={{ label: "Interval", value: 0 }}
+          className={`btn btn-primary   ${
+            selectedMode === "Interval" ? "btn-selected" : ""
+          }`}
+          onClick={() => setSelectedMode("Interval")}
+        >
+          Interval
+        </button>
+        {/* {selectedMode === "Interval" ? (
           <select
-            className={`btn p2 btn-primary  interval__select  ${
+            className={`btn btn-primary  interval__select  ${
               selectedMode === "Interval" ? "btn-selected" : ""
             }`}
             onChange={(e) => setIntervalLength(e.target.value)}
@@ -25,14 +35,14 @@ const SelectMode = ({
         ) : (
           <button
             defaultValue={{ label: "Interval", value: 0 }}
-            className={`btn p2 btn-primary   ${
+            className={`btn btn-primary   ${
               selectedMode === "Interval" ? "btn-selected" : ""
             }`}
             onClick={() => setSelectedMode("Interval")}
           >
             Interval
           </button>
-        )}
+        )} */}
         <button
           className={`btn p2 btn-primary   ${
             selectedMode === "Freestyle" ? "btn-selected" : ""
