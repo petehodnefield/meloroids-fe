@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN } from "../../utils/mutations";
 import Auth from "../../utils/auth";
-
+import "../../assets/LoginSignup.css";
 const Login = () => {
   const [formState, setFormState] = useState({ username: "", password: "" });
   console.log(formState);
@@ -31,10 +31,10 @@ const Login = () => {
   };
   return (
     <div className="login-form-wrapper">
-      <h4 className="form__header">Login</h4>
+      <h3 className="form__header">Login</h3>
       <form onSubmit={handleFormSubmit} id="login-form" className="form">
         <div className="input__wrapper">
-          <label className="p3 form__label">Username</label>
+          <label className=" form__label">Username</label>
           <input
             name="username"
             className="form__input"
@@ -43,7 +43,7 @@ const Login = () => {
           ></input>
         </div>
         <div className="input__wrapper">
-          <label label className="p3 form__label">
+          <label label className=" form__label">
             Password
           </label>
           <input
@@ -53,13 +53,17 @@ const Login = () => {
             onChange={handleChange}
           ></input>
         </div>
-        <button type="submit" className="btn btn-form btn-tertiary">
-          Login
-        </button>
+        <div className="form-btn-wrapper">
+          <button type="submit" className="btn btn-form btn-tertiary">
+            Login
+          </button>{" "}
+          <Link className="btn-form " to="/signup">
+            <button className="btn btn-outline btn-form btn-signup">
+              Signup
+            </button>
+          </Link>
+        </div>
       </form>{" "}
-      <a className="" href="/signup">
-        <button className="btn btn-outline btn-form p3">Signup</button>
-      </a>
     </div>
   );
 };

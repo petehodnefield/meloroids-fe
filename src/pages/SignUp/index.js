@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useMutation } from "@apollo/client";
 import Auth from "../../utils/auth";
 import { CREATE_USER } from "../../utils/mutations";
+import "../../assets/LoginSignup.css";
 
 const SignUp = () => {
   const [formPwMatch, setFormPwMatch] = useState("");
@@ -54,7 +55,7 @@ const SignUp = () => {
   };
   return (
     <div className="login-form-wrapper">
-      <h4 className="form__header">Signup</h4>
+      <h3 className="form__header">Signup</h3>
       <form id="signup-form" className="form" onSubmit={handleFormSubmit}>
         <div className="input__wrapper">
           <label className="p3 form__label">Username</label>

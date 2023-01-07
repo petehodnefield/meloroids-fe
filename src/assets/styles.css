@@ -158,8 +158,12 @@ h5 {
   background: var(--primary);
 }
 .btn-form {
-  margin-bottom: 0.5rem;
   text-align: center;
+  width: 100%;
+  font-size: 0.875rem;
+}
+.btn-signup {
+  color: var(--tertiary);
 }
 .btn-reroll {
   background: none;
@@ -214,52 +218,6 @@ h5 {
     opacity: 1;
   }
 }
-/* login form style begin */
-.login-form-wrapper {
-  border: 1px solid var(--black);
-  margin: 5.5rem 1rem;
-  border-radius: 4px;
-  text-align: center;
-  padding-bottom: 1.5rem;
-}
-.form__header {
-  padding-top: 1.5rem;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.input__wrapper {
-  flex-direction: column;
-  align-items: flex-start;
-  display: flex;
-  justify-content: flex-start;
-  width: 80%;
-}
-.form__input {
-  border-radius: 4px;
-  width: 100%;
-  border: 1px solid var(--tertiary);
-  margin-bottom: 0.75rem;
-  height: 1.25rem;
-}
-.form__input:focus {
-  outline: none;
-  border: 1px solid var(--accent1);
-}
-.form__label {
-  margin-bottom: 0.125rem;
-}
-.form__loginLink {
-  color: var(--tertiary);
-  text-decoration: underline;
-  margin-left: 0.25rem;
-}
-.form__text {
-  margin: 0.25rem 0 0.75rem;
-}
 
 /* footer styles begins */
 .footer {
@@ -289,25 +247,4 @@ h5 {
 }
 .logo-footer {
   max-height: 4rem;
-}
-
-@media (min-width: 768px) {
-  /* Login/signup style */
-  .login-form-wrapper {
-    margin: 5.5rem 8rem;
-  }
-}
-
-@media (min-width: 1080px) {
-  /* Login/signup style */
-  .login-form-wrapper {
-    margin: 5.5rem 12rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  /* Login/signup style */
-  .login-form-wrapper {
-    margin: 10rem 30rem;
-  }
 }
