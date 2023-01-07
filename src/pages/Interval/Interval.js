@@ -24,7 +24,7 @@ function Interval({ setIsOpen, photo, minutes }) {
     );
   } else {
     return (
-      <div onClick={() => setIsOpen(false)}>
+      <div className="extra-bottom-padding" onClick={() => setIsOpen(false)}>
         {" "}
         <Timer />
         <TrainInfo
