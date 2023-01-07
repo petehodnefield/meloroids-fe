@@ -9,7 +9,7 @@ import { modesList } from "../../data/modesList";
 import "./ArtistModeSelect.css";
 import logoFull from "../../assets/logo/meloroids.png";
 
-function ArtistModeSelect() {
+function ArtistModeSelect({ setIsOpen }) {
   // import artistarray
   const artists = artistsPhotos;
 
@@ -46,7 +46,7 @@ function ArtistModeSelect() {
   }, [selectedMode]);
 
   return (
-    <div className="artist-mode-container">
+    <div onClick={() => setIsOpen(false)} className="artist-mode-container">
       <div className="homepage-logo-wrapper">
         <img className="homepage-logo" src={logoFull}></img>
       </div>

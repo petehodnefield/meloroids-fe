@@ -6,7 +6,7 @@ import { ARTISTS, SINGLE_ARTIST, SINGLE_SONG } from "../../utils/queries";
 import TrainInfo from "./components/TrainInfo";
 import Timer from "../../components/Timer";
 import "../../assets/Train.css";
-function Interval({ photo, minutes }) {
+function Interval({ setIsOpen, photo, minutes }) {
   // grab artist&&mode from parameters
   const { artists: artist, mode } = useParams();
 
@@ -24,10 +24,14 @@ function Interval({ photo, minutes }) {
     );
   } else {
     return (
-      <div>
+      <div onClick={() => setIsOpen(false)}>
         {" "}
         <Timer />
-        <TrainInfo artist_name={artist} minutes={minutes}></TrainInfo>
+        <TrainInfo
+          setIsOpen={setIsOpen}
+          artist_name={artist}
+          minutes={minutes}
+        ></TrainInfo>
       </div>
     );
   }

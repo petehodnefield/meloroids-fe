@@ -4,7 +4,7 @@ import { useQuery } from "@apollo/client";
 import { ARTISTS, SINGLE_ARTIST, SINGLE_SONG } from "../../utils/queries";
 import TrainInfo from "./components/TrainInfo";
 import "../../assets/Train.css";
-function FreeStyle({ photo }) {
+function FreeStyle({ photo, setIsOpen }) {
   // grab artist&&mode from parameters
   const { artists: artist, mode } = useParams();
 
@@ -20,7 +20,7 @@ function FreeStyle({ photo }) {
       </div>
     );
   } else {
-    return <TrainInfo artist_name={artist}></TrainInfo>;
+    return <TrainInfo setIsOpen={setIsOpen} artist_name={artist}></TrainInfo>;
   }
 }
 export default FreeStyle;

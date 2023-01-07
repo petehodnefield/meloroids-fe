@@ -13,7 +13,7 @@ import KeyTempoChords from "../../../components/KeyTempoChords";
 import ReRollFreestyle from "../../../components/KeyTempoChords/ReRoll/ReRollFreestyle";
 import { chordIcon, keyIcon, tempoIcon } from "../../../data/icons";
 
-function TrainInfo({ artist_name }) {
+function TrainInfo({ artist_name, setIsOpen }) {
   const {
     data: songData,
     loading: songLoading,
@@ -45,7 +45,7 @@ function TrainInfo({ artist_name }) {
     }
 
     return (
-      <div className="train-wrapper">
+      <div onClick={() => setIsOpen(false)} className="train-wrapper">
         <div className="train-contents">
           <div className="box-shadow train-img-container">
             {" "}

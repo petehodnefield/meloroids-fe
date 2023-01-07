@@ -6,8 +6,7 @@ import "./Header.css";
 import NavLinks from "./components/NavLinks";
 import Hamburger from "./components/Hamburger";
 import HamburgerLinks from "./components/HamburgerLinks";
-const Header = ({ navSelected, setNavSelected }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Header = ({ isOpen, setIsOpen, navSelected, setNavSelected }) => {
   return (
     <div className="header">
       {" "}

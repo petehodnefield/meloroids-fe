@@ -20,6 +20,8 @@ import HomeScreen from "./pages/HomeScreen";
 
 const App = () => {
   const [navSelected, setNavSelected] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
   const client = new ApolloClient({
     uri: "https://meloroids-api.onrender.com/graphql",
     cache: new InMemoryCache(),
@@ -28,6 +30,8 @@ const App = () => {
     <ApolloProvider client={client}>
       <BrowserRouter>
         <Header
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
           navSelected={navSelected}
           setNavSelected={setNavSelected}
         ></Header>
@@ -36,24 +40,25 @@ const App = () => {
             path="/"
             element={
               <HomeScreen
+                setIsOpen={setIsOpen}
                 navSelected={navSelected}
                 setNavSelected={setNavSelected}
               />
             }
           />
-          <Route path="/train" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/train" element={<Home setIsOpen={setIsOpen} />} />
+          <Route path="/login" element={<Login setIsOpen={setIsOpen} />} />
+          <Route path="/signup" element={<SignUp setIsOpen={setIsOpen} />} />
           <Route path="/learn" element={<ComingSoon />} />
           <Route path="/stats" element={<ComingSoon />} />
 
           <Route
             path="/train/artists/:artists/Freestyle"
-            element={<Freestyle />}
+            element={<Freestyle setIsOpen={setIsOpen} />}
           />
           <Route
             path="/train/artists/:artists/Interval"
-            element={<Interval></Interval>}
+            element={<Interval setIsOpen={setIsOpen}></Interval>}
           />
         </Routes>
         {/* <Footer></Footer> */}
